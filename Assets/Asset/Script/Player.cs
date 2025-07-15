@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class Player : MonoBehaviour
     public float Gravity = -15f;
     public float strength = 7f;
     Vector3 direction;
+    public Text scoreText;
+
+   public int score = 0;
     void Start()
     {
         
@@ -22,5 +26,10 @@ public class Player : MonoBehaviour
 
         direction.y += Gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        score++;
+        scoreText.text = "Score :" + score;
     }
 }
