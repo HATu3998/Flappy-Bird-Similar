@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - delObject
+  - Obstacle
+  - Point
   layers:
   - Default
   - TransparentFX
